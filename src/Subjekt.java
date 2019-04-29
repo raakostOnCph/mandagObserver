@@ -5,6 +5,8 @@ public class Subjekt {
 
     private static int antal=0;
 
+    private int typeAntal=0;
+
     private String besked;
 
     List<Observatør> observatørList = new ArrayList<>();
@@ -37,10 +39,15 @@ public class Subjekt {
         return antal;
     }
 
+    public int getTypeAntal() {
+        return typeAntal;
+    }
+
     public void abonner(Observatør observatør) {
 
         observatørList.add(observatør);
         antal++;
+        typeAntal++;
 
 
     }

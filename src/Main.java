@@ -54,6 +54,9 @@ public class Main {
 
         System.out.println("det samlede antal er " + Subjekt.getAntal());
 
+        System.out.println("det samlede antal blå er " + blåt.getTypeAntal());
+
+
 
     }
 
