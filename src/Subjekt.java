@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Subjekt {
 
+    private static int antal=0;
 
     private String besked;
 
@@ -15,7 +16,11 @@ public class Subjekt {
     public void setBesked(String besked) {
         this.besked = besked;
         // her skal vi lige advisere alle vores abonnenter
-        adviserAbonnenter();
+
+
+//        if(besked.equals("badtid er slut" )) {
+            adviserAbonnenter();
+//        }
     }
 
     private void adviserAbonnenter() {
@@ -28,11 +33,14 @@ public class Subjekt {
 
     }
 
-
+    public static int getAntal() {
+        return antal;
+    }
 
     public void abonner(Observatør observatør) {
 
         observatørList.add(observatør);
+        antal++;
 
 
     }

@@ -38,6 +38,23 @@ public class Main {
 
         udskrivListe(abonnenter);
 
+
+        Subjekt reuters = new Subjekt();
+
+        Avis EB = new Avis(reuters,"Ekstrabladet");
+        Avis BT = new Avis(reuters,"Berlingsketidne");
+
+        reuters.setBesked("mand bidder hund");
+
+        abonnenter.add(EB);
+        abonnenter.add(BT);
+
+
+        System.out.println("\n\n\n\n\n\n");
+
+        System.out.println("det samlede antal er " + Subjekt.getAntal());
+
+
     }
 
     public static void udskrivListe(List<Observatør> observatørs){
@@ -47,4 +64,6 @@ public class Main {
 
         }
     }
+
+
 }
